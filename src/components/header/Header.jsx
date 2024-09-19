@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo.webp";
-import CountryDropDown from "../countryDropDown";
 import { Button } from "@mui/material";
 import { FiUser } from "react-icons/fi";
 import { IoBagOutline } from "react-icons/io5";
-import SearchBox from "./searchBox";
-import Navigation from "./navigation";
+import SearchBox from "./search-box/SearchBox";
+import Navigation from "./navigation/Navigation";
+import CountryDropDown from "../country-drop-down/CountryDropDown";
 
 const Header = () => {
   return (
