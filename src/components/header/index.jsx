@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logo.webp";
 import CountryDropDown from "../countryDropDown";
-import { IoIosSearch } from "react-icons/io";
 import { Button } from "@mui/material";
 import { FiUser } from "react-icons/fi";
 import { IoBagOutline } from "react-icons/io5";
+import SearchBox from "./searchBox";
+import Navigation from "./navigation";
 
 const Header = () => {
   return (
@@ -28,12 +29,7 @@ const Header = () => {
               </div>
               <div className="col-sm-10 d-flex align-items-center part2">
                 <CountryDropDown />
-                <div className="headerSearch mx-3">
-                  <input type="text" placeholder="Search for products..." />
-                  <Button>
-                    <IoIosSearch />
-                  </Button>
-                </div>
+                <SearchBox />
                 <div className="part3 d-flex align-items-center ml-auto">
                   <Button className="circle me-3">
                     <FiUser />
@@ -44,7 +40,9 @@ const Header = () => {
                       <Button className="circle ms-2">
                         <IoBagOutline />
                       </Button>
-                      <span className="count d-flex align-items-center justify-content-center">1</span>
+                      <span className="count d-flex align-items-center justify-content-center">
+                        1
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -52,6 +50,7 @@ const Header = () => {
             </div>
           </div>
         </header>
+        <Navigation />
       </div>
     </>
   );
