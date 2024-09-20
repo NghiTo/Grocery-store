@@ -25,6 +25,11 @@ body {
   background: transparent;
 }
 
+.headerWrapper {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+}
+
 .headerWrapper .top-strip {
   padding: 8px 0;
 }
@@ -163,7 +168,7 @@ header .part3 .circle svg {
   height: 20px;
 }
 
-.locationModal .MuiPaper-elevation{
+.locationModal .MuiPaper-elevation {
   padding: 25px;
   position: relative;
 }
@@ -187,6 +192,14 @@ header .part3 .circle svg {
   color: #000;
   justify-content: flex-start;
   padding: 15px 20px;
+}
+
+.locationModal .countryList li button:hover {
+  background-color: #f1f1f1;
+}
+
+.locationModal .countryList li button.active {
+  background-color: #e2e2e2;
 }
 
 .locationModal .close_ {
@@ -245,7 +258,7 @@ nav .navPart2 ul li a {
   text-decoration: none;
 }
 
-nav .navPart2 ul li a button{
+nav .navPart2 ul li a button {
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
@@ -253,7 +266,7 @@ nav .navPart2 ul li a button{
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  padding: 8px 15px;
+  padding: 8px 14px;
   transition: all 0.2s ease-in-out;
   border-radius: 25px;
 }
