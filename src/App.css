@@ -27,7 +27,7 @@ body {
 
 .headerWrapper {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
 }
 
 .headerWrapper .top-strip {
@@ -222,6 +222,52 @@ nav .navPart1 {
   flex: 0 0 20%;
 }
 
+nav .navPart1 .catWrapper {
+  position: relative;
+}
+
+nav .navPart1 .catWrapper .sidebarNav {
+  width: 100%;
+  height: 0px;
+  opacity: 0;
+  background-color: #fff;
+  position: absolute;
+  top: 136%;
+  left: 0px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  transition: all 0.2s;
+  visibility: hidden;
+  z-index: 100;
+}
+
+nav .navPart1 .catWrapper .sidebarNav.open {
+  height: auto; 
+  opacity: 1;
+  visibility: inherit;
+}
+
+nav .navPart1 .catWrapper .sidebarNav ul {
+  padding-left: 0;
+}
+
+nav .navPart1 .catWrapper .sidebarNav li {
+  width: 100%;
+  list-style: none;
+  padding: 0px 15px;
+}
+
+nav .navPart1 .catWrapper .sidebarNav li button {
+  color: #000;
+  width: 100%;
+  justify-content: flex-start;
+  text-transform: capitalize;
+}
+
+nav .navPart1 .catWrapper .sidebarNav li button:hover {
+  background: transparent;
+}
+
 nav .navPart2 {
   max-width: 80%;
   flex: 0 0 80%;
@@ -252,6 +298,46 @@ nav .allCatTab .icon1 svg {
 
 nav .navPart2 ul {
   margin-bottom: 0px;
+  padding-bottom: 20px;
+}
+
+nav .navPart2 ul li {
+  position: relative;
+}
+
+nav .navPart2 ul li:hover .submenu {
+  opacity: 1;
+  visibility: inherit;
+  top: 100%;
+}
+
+nav .navPart2 ul li .submenu {
+  position: absolute;
+  top: 150%;
+  left: 0;
+  min-width: 200px;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  z-index: 100;
+}
+
+nav .navPart2 ul li .submenu a {
+  display: block;
+  width: 100%;
+}
+
+nav .navPart2 ul li .submenu a button {
+  width: 100%;
+  justify-content: flex-start;
+  border-radius: 0px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+nav .navPart2 ul li .submenu a button:hover {
+  background-color: #f1f1f1;
 }
 
 nav .navPart2 ul li a {
@@ -266,7 +352,7 @@ nav .navPart2 ul li a button {
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  padding: 8px 14px;
+  padding: 8px 15px;
   transition: all 0.2s ease-in-out;
   border-radius: 25px;
 }
